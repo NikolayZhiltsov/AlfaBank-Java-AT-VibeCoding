@@ -55,6 +55,7 @@ public class LinesAndConditionsAndLoops {
         int bug = 0;
         int critical = 0;
         int pass = 0;
+        int total;
         boolean showOnlyIssues = true;
 
 
@@ -83,7 +84,7 @@ public class LinesAndConditionsAndLoops {
         }
 
         //Суммируем общее количество тестов и выводим количество тестов с каждым статусом
-        int total = flaky + bug + critical + pass;
+        total = flaky + bug + critical + pass;
         System.out.println(String.format(STATISTIC_MESSAGE, total, pass, flaky, bug, critical));
 
     }
