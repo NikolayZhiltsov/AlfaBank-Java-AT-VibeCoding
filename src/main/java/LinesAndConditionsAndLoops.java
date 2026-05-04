@@ -11,7 +11,7 @@ public class LinesAndConditionsAndLoops {
         final int PARTS_COUNTER = 5;
         final String INPUT_PART_MESSAGE = "Введите %d-ю часть сообщения:";
         final String INPUT_PART_ERROR_MESSAGE = "Часть сообщения повреждена! Используем резервный фрагмент...";
-        final String FINAL_UNENCRIPTED_MESSAGE = "Расшифрованное послание: %s";
+        final String FINAL_UNENCRYPTED_MESSAGE = "Расшифрованное послание: %s";
         Scanner input = new Scanner(System.in);
         StringBuilder totalMessage = new StringBuilder();
 
@@ -33,7 +33,7 @@ public class LinesAndConditionsAndLoops {
         }
 
         //Выводим результат
-        System.out.println(String.format(FINAL_UNENCRIPTED_MESSAGE, totalMessage));
+        System.out.println(String.format(FINAL_UNENCRYPTED_MESSAGE, totalMessage));
 
         System.out.println("========================================");
 
