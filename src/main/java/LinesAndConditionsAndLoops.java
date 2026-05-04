@@ -21,7 +21,7 @@ public class LinesAndConditionsAndLoops {
             if (i > 1) {
                 totalMessage.append(SEPARATOR_FOR_PARTS);
             }
-            if (line == null || line.isEmpty()) {
+            if (line == null || line.isEmpty() || line.isBlank()) {
                 System.out.println("Часть сообщения повреждена! Используем резервный фрагмент...");
                 totalMessage.append(DAMAGED_PARTS_REPLACER);
             } else {
