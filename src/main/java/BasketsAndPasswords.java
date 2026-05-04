@@ -62,7 +62,6 @@ public class BasketsAndPasswords {
                 .mapToInt(String::length)
                 .average()
                 .orElse(0.0);
-
         System.out.printf("Средняя длина слова (символов): " + "%.2f", averageLength);
 
         System.out.println("\n===================================================");
