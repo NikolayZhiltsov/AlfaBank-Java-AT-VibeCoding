@@ -66,7 +66,7 @@ public class Methods {
     public static String logEvent (String message, boolean isCritical) {
 
         if (isCritical) {
-            return logEvent("[CRITICAL]" + message); //Добавляем новую логику перегруженного метода
+            return "[CRITICAL]" + message; //Добавляем новую логику перегруженного метода
         }
         return logEvent(message); //Переиспользуем оригинальный метод logEvent
     }
