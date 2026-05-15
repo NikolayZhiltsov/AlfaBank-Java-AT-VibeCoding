@@ -1,3 +1,5 @@
+package ru.alfabank.homeworks.homework5;
+
 import java.time.LocalDate;
 import java.util.Random;
 import java.util.stream.IntStream;

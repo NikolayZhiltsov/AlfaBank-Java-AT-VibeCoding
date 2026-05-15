@@ -1,3 +1,5 @@
+package ru.alfabank.homeworks.homework2;
+
 import java.util.Random;
 
 public class InfoTsygan {
