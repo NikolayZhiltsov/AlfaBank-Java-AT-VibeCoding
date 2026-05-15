@@ -1,3 +1,5 @@
+package ru.alfabank.homeworks.homework4;
+
 import java.util.Scanner;
 
 public class LinesAndConditionsAndLoops {

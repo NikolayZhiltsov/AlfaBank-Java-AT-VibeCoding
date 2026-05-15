@@ -1,3 +1,5 @@
+package ru.alfabank.homeworks.homework3;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Stream;

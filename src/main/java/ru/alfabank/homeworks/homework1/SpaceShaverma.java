@@ -1,3 +1,5 @@
+package ru.alfabank.homeworks.homework1;
+
 public class SpaceShaverma {
 	public static void main(String[] args) {
 		String workerFullName = "Космоторговцев Шаверман Горчицевич";
