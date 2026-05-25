@@ -73,6 +73,7 @@ public class Parcel {
         System.out.println(String.format("Имя получателя: %s%nАдрес доставки: %s%nВес посылки: %.2f%nТрек-номер: %s",
                 recipientName,
                 deliveryAddress,
-                packageWeight, trackingNumber));
+                packageWeight,
+                trackingNumber));
     }
 }
