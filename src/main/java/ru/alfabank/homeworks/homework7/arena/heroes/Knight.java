@@ -61,9 +61,7 @@ public class Knight extends Hero{
 
     @Override
     public String toString() {
-        return "Имя: " + getName() + ", "
-                + "Уровень: " + getLevel() + ", "
-                + "Здоровье: " + getHealth() + ", "
-                + "Броня: " + getArmor() ;
+        super.printInfo();
+        return "Броня: " + getArmor() ;
     }
 }
