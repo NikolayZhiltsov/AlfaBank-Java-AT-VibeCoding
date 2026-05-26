@@ -32,6 +32,7 @@ public class App {
 
         final Knight knight = new Knight("Рыцарь в золотых доспехах", 54, 81, 2);
         System.out.println(knight);
+        System.out.println(); // разделитель
 
 
         // Меняем одно любое поле уже созданного статичного рыцаря и снова выводим все поля
