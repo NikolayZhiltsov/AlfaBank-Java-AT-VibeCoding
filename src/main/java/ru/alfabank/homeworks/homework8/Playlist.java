@@ -1,4 +1,4 @@
-package ru.alfabank.homeworks.nomework8;
+package ru.alfabank.homeworks.homework8;
 
 import java.util.ArrayList;
 

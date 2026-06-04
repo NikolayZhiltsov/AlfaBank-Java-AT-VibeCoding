@@ -1,4 +1,4 @@
-package ru.alfabank.homeworks.nomework8;
+package ru.alfabank.homeworks.homework8;
 
 public class Winamp {
     static void main() {
