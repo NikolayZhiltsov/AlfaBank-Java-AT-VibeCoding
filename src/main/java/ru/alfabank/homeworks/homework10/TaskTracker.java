@@ -38,4 +38,18 @@ public class TaskTracker {
         }
     }
 
+
+    // Задаём метод поиска таски по названию
+
+    public void findTaskByTitle(String title) {
+        for (Task task : tasks) {
+            if (task.getTitle().equalsIgnoreCase(title)) {
+                System.out.print("Задача найдена: ");
+                task.printTaskInfo();
+                return;
+            }
+        }
+        System.out.println("Задача не найдена");
+    }
+
 }
