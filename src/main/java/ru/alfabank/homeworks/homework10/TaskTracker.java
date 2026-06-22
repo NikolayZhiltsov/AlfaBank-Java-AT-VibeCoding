@@ -25,5 +25,17 @@ public class TaskTracker {
     }
 
 
+    // Задаём метод вывода всех тасок
+
+    public void printAllTasks() {
+        if (tasks.isEmpty()) {
+            System.out.println("Список задач пуст.");
+            return;
+        }
+        System.out.println("--- Список всех задач ---");
+        for (Task task : tasks) {
+            task.printTaskInfo();
+        }
+    }
 
 }
