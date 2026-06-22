@@ -1,6 +1,10 @@
 package ru.alfabank.homeworks.homework10;
 
 public class Task {
+
+
+    // Задаём переменные для хранения названия и состояния таски
+
     private final String title;
     private boolean isCompleted;
 
