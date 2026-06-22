@@ -67,5 +67,23 @@ public class TaskTracker {
     }
 
 
+    // Задаём метод, выводящий статистику по всем таскам
 
+    public void printStatistics() {
+        int total = tasks.size();
+        int completed = 0;
+
+        for (Task task : tasks) {
+            if (task.isCompleted()) {
+                completed++;
+            }
+        }
+
+        int open = total - completed;
+
+        System.out.println("--- Статистика по задачам ---");
+        System.out.println("Всего задач: " + total);
+        System.out.println("Выполнено: " + completed);
+        System.out.println("Открыто: " + open);
+    }
 }
