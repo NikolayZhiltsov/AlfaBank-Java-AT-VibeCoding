@@ -52,4 +52,20 @@ public class TaskTracker {
         System.out.println("Задача не найдена");
     }
 
+
+    // Задаём метод пометки таски как выполненной
+
+    public void completeTask(String title) {
+        for (Task task : tasks) {
+            if (task.getTitle().equalsIgnoreCase(title)) {
+                task.markAsCompleted();
+                System.out.println("Задача \"" + title + "\" отмечена как выполненная.");
+                return;
+            }
+        }
+        System.out.println("Не удалось выполнить: задача с названием \"" + title + "\" не найдена.");
+    }
+
+
+
 }
