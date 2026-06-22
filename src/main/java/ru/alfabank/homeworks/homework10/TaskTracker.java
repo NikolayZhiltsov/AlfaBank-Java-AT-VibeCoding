@@ -16,4 +16,14 @@ public class TaskTracker {
         this.tasks = new ArrayList<>();
     }
 
+
+    // Задаём метод добавления таски в список
+
+    public void addTask(String title) {
+        tasks.add(new Task(title));
+        System.out.println("Задача \"" + title + "\" успешно добавлена.");
+    }
+
+
+
 }
