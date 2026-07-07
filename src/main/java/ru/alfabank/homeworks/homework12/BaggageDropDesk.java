@@ -20,7 +20,8 @@ public class BaggageDropDesk {
     }
 
     //Задаём метод сдачи багажа
-    public void baggageCheckIn (String passengerName, String flightName, int baggageWeight) {
+    public void baggageCheckIn (String passengerName, String flightName, int baggageWeight)
+            throws BaggageTagPrintException, FlightNotFoundException, OverweightBaggageException {
 
         //Проверяем имя пассажира
         if (passengerName == null || passengerName.isBlank()) {
@@ -34,35 +35,25 @@ public class BaggageDropDesk {
 
         //Проверяем наличие рейса
         if (!flights.contains(flightName)) {
-            try {
-                throw new FlightNotFoundException("Ошибка: Такого рейса нет в списке!");
-            } catch (FlightNotFoundException e) {
-                System.out.println(e.getMessage());
-            }
+            throw new FlightNotFoundException("Ошибка: Такого рейса нет в списке!");
         }
 
 
         //Проверяем вес багажа на перевес
         if (baggageWeight > 23) {
-            try {
-                throw new OverweightBaggageException("Ошибка: Вес багажа слишком велик!");
-            } catch (OverweightBaggageException e) {
-                System.out.println(e.getMessage());
-            }
+            throw new OverweightBaggageException("Ошибка: Вес багажа слишком велик!");
         }
 
         //Имитируем проблему с печатью бирки
         if (flightName.equals("AE-404")) {
-            try {
-                throw new BaggageTagPrintException("Ошибка: Неверный номер рейса!");
-            } catch (BaggageTagPrintException e) {
-                System.out.println(e.getMessage());
-            }
+            throw new BaggageTagPrintException("Ошибка: Неверный номер рейса!");
         }
 
         //Описываем поведение в случае успеха
-        System.out.println("Уплатите налог за слишком правильно введённые данные!");
-        BaggageTicket baggageTicket = new BaggageTicket(passengerName, flightName, baggageWeight);
-        baggageTicket.toString();
+        else {
+            System.out.println("Уплатите налог за слишком правильно введённые данные!");
+            BaggageTicket baggageTicket = new BaggageTicket(passengerName, flightName, baggageWeight);
+            baggageTicket.toString();
+        }
     }
 }
