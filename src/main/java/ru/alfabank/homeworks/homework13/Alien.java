@@ -63,9 +63,9 @@ public class Alien {
     //Переопределяем toString()
     @Override
     public String toString() {
-        return "Параметры чужого: " + '\n'  +
+        return '\n' +"Параметры чужого: " + '\n'  +
                 "имя: " + name + '\n' +
                 "планета: " + planet + '\n' +
-                "уровень опасности = " + dangerLevel;
+                "уровень опасности = " + dangerLevel + '\n' + "============";
     }
 }

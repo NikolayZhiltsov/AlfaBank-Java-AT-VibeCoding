@@ -59,6 +59,20 @@ public class SquadManager {
     //Задаём метод фильтрации трýсов №1
     public void filterOutCowards1 (List<String> squad) {
         System.out.println(squad.toString());
+        Iterator<String>  iterator = squad.iterator();
+        while (iterator.hasNext()) {
+            String name = iterator.next();
+            if (name != null && name.startsWith("Трус")) {
+                iterator.remove();
+            }
+        }
+        System.out.println(squad.toString());
+    }
 
+    //Задаём метод фильтрации трýсов №2
+    public void filterOutCowards2 (List<String> squad) {
+        System.out.println(squad.toString());
+        squad.removeIf(name -> name != null && name.startsWith("Трус"));
+        System.out.println(squad.toString());
     }
 }
