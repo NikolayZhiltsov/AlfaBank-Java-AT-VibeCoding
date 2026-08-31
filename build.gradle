@@ -18,6 +18,9 @@ dependencies {
     implementation("net.datafaker:datafaker:2.5.4")
     // Source: https://mvnrepository.com/artifact/com.github.lalyos/jfiglet
     implementation("com.github.lalyos:jfiglet:0.0.8")
+    testImplementation 'io.cucumber:cucumber-java:7.15.0'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.15.0'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.10.2'
 }
 
 test {
