@@ -11,16 +11,29 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:6.0.0')
+    // 1. Управляем всеми версиями тестов через стабильный JUnit 5 BOM
+    testImplementation platform('org.junit:junit-bom:5.11.0')
+
+    // 2. Артефакты JUnit 5 подтягивают правильную версию из BOM автоматически
     testImplementation 'org.junit.jupiter:junit-jupiter'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-    // Source: https://mvnrepository.com/artifact/net.datafaker/datafaker
-    implementation("net.datafaker:datafaker:2.5.4")
-    // Source: https://mvnrepository.com/artifact/com.github.lalyos/jfiglet
-    implementation("com.github.lalyos:jfiglet:0.0.8")
+
+    // Движок для запуска Test Suites (необходим для Cucumber / Сьютов в JUnit 5)
+    testRuntimeOnly 'org.junit.platform:junit-platform-suite-engine'
+
+    // 3. Сторонние библиотеки (бизнес-логика)
+    implementation 'net.datafaker:datafaker:2.5.4'
+    implementation 'com.github.lalyos:jfiglet:0.0.8'
+
+    // 4. Инструменты тестирования (REST Assured и Cucumber)
+    testImplementation 'io.rest-assured:rest-assured:5.5.0'
     testImplementation 'io.cucumber:cucumber-java:7.15.0'
     testImplementation 'io.cucumber:cucumber-junit-platform-engine:7.15.0'
-    testImplementation 'org.junit.platform:junit-platform-suite:1.10.2'
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.38'
+    testCompileOnly 'org.projectlombok:lombok:1.18.38'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.22.2'
 }
 
 test {
