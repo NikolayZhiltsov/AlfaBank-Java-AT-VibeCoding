@@ -34,6 +34,9 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.38'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.38'
     testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.22.2'
+
+    // Актуальная версия Selenide с поддержкой современных версий Java
+    testImplementation 'com.codeborne:selenide:7.18.1'
 }
 
 test {
