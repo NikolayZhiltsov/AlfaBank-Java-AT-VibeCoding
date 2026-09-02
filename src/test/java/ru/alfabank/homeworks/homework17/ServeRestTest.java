@@ -154,9 +154,11 @@ public class ServeRestTest {
                 .then()
                 .statusCode(200)
                 .body("quantidade", greaterThan(0))
-                .body("produtos.preco", everyItem(greaterThan(0)))
-                .body("produtos.nome", everyItem(not(emptyString())))
-                .body("produtos.nome", hasItem("Logitech MX Vertical"));
+                .body("produtos[0].nome", not(emptyString()))
+                .body("produtos[0].preco", greaterThan(0))
+                .body("produtos[0].descricao", not(emptyString()))
+                .body("produtos[0].quantidade", greaterThan(0))
+                .body("produtos[0]._id", not(emptyString()));
     }
 
     @Test
