@@ -1,6 +1,7 @@
 plugins {
     id 'java'
 	id 'application'
+    id 'io.qameta.allure' version '4.1.0'
 }
 
 group = 'ru.alfabank'
@@ -8,6 +9,17 @@ version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+}
+
+allure {
+    version = '2.29.0' // Версия консольной утилиты для сборки отчета
+    adapter {
+        frameworks {
+            junit5 {
+                adapterVersion = '2.35.4' // Версия библиотек для JUnit 5
+            }
+        }
+    }
 }
 
 dependencies {
